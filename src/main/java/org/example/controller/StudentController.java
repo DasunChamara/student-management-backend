@@ -1,4 +1,5 @@
 package org.example.controller;
+
 import org.example.model.Student;
 import org.example.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,10 +9,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/students")
-@CrossOrigin(origins = "http://localhost:3000")
-
-
+@CrossOrigin(origins = "*") // ඕනෑම Frontend Domain එකකට (Vercel ඇතුළුව) අවසර ලබා දීම
 public class StudentController {
+
     @Autowired
     private StudentRepository studentRepository;
 
@@ -43,5 +43,3 @@ public class StudentController {
         studentRepository.deleteById(id);
     }
 }
-
-
