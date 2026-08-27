@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/students")
-@CrossOrigin(origins = "*") // ඕනෑම Frontend Domain එකකට (Vercel ඇතුළුව) අවසර ලබා දීම
+@CrossOrigin(origins = "*")
 public class StudentController {
 
     @Autowired
